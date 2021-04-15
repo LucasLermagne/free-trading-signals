@@ -30,25 +30,18 @@ client.on("message",msg =>{
     if(msg.content == prefix + "ping"){
        msg.channel.send(" pong");
 
-        /*
-        if (!client.guilds.cache){
-            console.log("Pas de serveur");
-            return; 
-        } 
-
-
-        client.guilds.cache.forEach(guild => {
-        console.log(`${guild.name} | ${guild.id}`);
         
-            if (!guild.channels) return;
-            guild.channels.cache.forEach(channel => {
+
+
+        client.guilds.forEach(guild => {
+        console.log(`${guild.name} | ${guild.id}`);
+            guild.channels.forEach(channel => {
             if(channel.name == "anonces"){
                 console.log(`${channel.name} | ${channel.id}`);
-                //channel.send("test");
             }
             });
         
-      });*/
+      });
 
     }
 });
