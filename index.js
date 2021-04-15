@@ -32,8 +32,8 @@ client.on("message",msg =>{
                     console.log(`${channel.name} | ${channel.id}`);
                     //channel.send("test");
                 }
-              });*/
-           }
+              });
+           }*/
         
       });
 
