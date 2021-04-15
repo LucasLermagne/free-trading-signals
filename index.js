@@ -12,6 +12,7 @@ client.on("ready",()=>{
 
 
     //parcours les serveur
+    /*
     client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
         //parcours les chanelles de chaque serveur
@@ -21,7 +22,7 @@ client.on("ready",()=>{
                 channel.send("test");
             }
           });
-      });
+      });*/
 
 });
 
