@@ -11,8 +11,9 @@ client.on("ready",()=>{
     console.log("bot opérationnel");
 
 
-    //parcours les serveur
+ 
     
+
 
 });
 
@@ -23,13 +24,15 @@ client.on("message",msg =>{
 
        client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
-        //parcours les chanelles de chaque serveur
-        guild.channels.cache.forEach(channel => {
-            if(channel.name == "anonces"){
-                console.log(`${channel.name} | ${channel.id}`);
-                //channel.send("test");
-            }
-          });
+           if(guild.channels){
+            guild.channels.cache.forEach(channel => {
+                if(channel.name == "anonces"){
+                    console.log(`${channel.name} | ${channel.id}`);
+                    //channel.send("test");
+                }
+              });
+           }
+        
       });
 
     }
