@@ -12,17 +12,17 @@ client.on("ready",()=>{
 
 
     //parcours les serveur
-    /*
+    
     client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
         //parcours les chanelles de chaque serveur
         guild.channels.cache.forEach(channel => {
             if(channel.name == "anonces"){
                 console.log(`${channel.name} | ${channel.id}`);
-                channel.send("test");
+                //channel.send("test");
             }
           });
-      });*/
+      });
 
 });
 
