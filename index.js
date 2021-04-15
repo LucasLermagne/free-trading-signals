@@ -10,7 +10,7 @@ const prefix = "!";
 client.on("ready",()=>{
     console.log("bot opérationnel");
 
-
+    client.guilds.size
  
     
 
@@ -22,11 +22,13 @@ client.on("message",msg =>{
     if(msg.content == prefix + "ping"){
        msg.channel.send(" pong");
 
-
+        /*
         if (!client.guilds.cache){
             console.log("Pas de serveur");
             return; 
         } 
+
+
         client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
         
@@ -38,7 +40,7 @@ client.on("message",msg =>{
             }
             });
         
-      });
+      });*/
 
     }
 });
