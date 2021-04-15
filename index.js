@@ -12,11 +12,9 @@ client.on("ready",()=>{
 
     
     client.guilds.forEach(guild => {
-        console.log(`${guild.name} | ${guild.id}`);
             guild.channels.forEach(channel => {
             if(channel.name == "free-trading-signals"){
-                console.log(`${channel.name} | ${channel.id}`);
-                channel.send("Achete .....");
+                channel.send("FLMUSDT	VOLUM>5-10%	BUY>0,85-0,75	SL>0,65	TP>1,35-1,85");
             }
             });
         
