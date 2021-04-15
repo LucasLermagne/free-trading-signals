@@ -16,7 +16,7 @@ client.on("ready",()=>{
             if(channel.name == "free-trading-signals"){
                 channel.send("FLMUSDT	VOLUM>5-10%	BUY>0,85-0,75	SL>0,65	TP>1,35-1,85");
 
-                let msg = new Discord.MessageEmbed()
+                let msg = new client.MessageEmbed()
                 .setColor("red")
                 .setTitle("1INCH/USDT")
                 .addField("titre","contenue")
