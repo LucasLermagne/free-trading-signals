@@ -21,7 +21,7 @@ client.on("message",msg =>{
     if(msg.author.bot) return;
     if(msg.content == prefix + "ping"){
        msg.channel.send(" pong");
-
+       if (!client.guilds.cache) return;
        client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
         /*
