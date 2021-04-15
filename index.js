@@ -14,7 +14,8 @@ client.on("ready",()=>{
 
     for(var i= 0; i < client.guilds.size; i++)
     {
-        console.log("serveur numero: " + i);  
+        console.log("serveur numero: " + i);
+        console.log("serveur name: " + client.guilds.cache.get(i));    
     }
     
 
