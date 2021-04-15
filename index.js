@@ -9,7 +9,7 @@ const prefix = "!";
 
 client.on("ready",()=>{
     console.log("bot opérationnel");
-
+    console.log(client.guilds.size);
     client.guilds.size
  
     
