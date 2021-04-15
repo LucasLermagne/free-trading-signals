@@ -5,10 +5,7 @@ const client = new Discord.Client;
 
 const prefix = "!";
 
-const msgCustom = new Discord.MessageEmbed()
-.setColor("red")
-.setTitle("1INCH/USDT")
-.addField("titre","contenue");
+const msgCustom = new Discord.MessageEmbed().setColor("red").setTitle("1INCH/USDT").addField("titre","contenue");
 
 
 client.on("ready",()=>{
