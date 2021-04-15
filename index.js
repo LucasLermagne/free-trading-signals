@@ -24,6 +24,7 @@ client.on("message",msg =>{
 
        client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
+        if (!guild.channels) return;
            if(guild.channels){
             guild.channels.cache.forEach(channel => {
                 if(channel.name == "anonces"){
