@@ -9,9 +9,13 @@ const prefix = "!";
 
 client.on("ready",()=>{
     console.log("bot opérationnel");
-    console.log(client.guilds.size);
-    client.guilds.size
- 
+    console.log("nb serveurs : " +client.guilds.size);
+    
+
+    for(var i= 0; i < client.guilds.size; i++)
+    {
+        console.log("serveur numero: " + i);  
+    }
     
 
 
@@ -46,3 +50,4 @@ client.on("message",msg =>{
 });
 
 client.login(process.env.TOKEN);
+
