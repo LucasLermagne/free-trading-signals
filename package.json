@@ -1,0 +1,13 @@
+{
+	"name": "free-trading-signals",
+	"version": "1.0.0",
+	"description": "My new Discord trading signals",
+	"main": "index.js",
+    "keywords": [],
+	"author": "Lucas Lermagne",
+	"license": "ISC",
+	"scripts": {
+		"start": "node index.js"
+	}
+
+}
