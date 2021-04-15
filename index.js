@@ -1,11 +1,14 @@
-const Discord = require("discord.js");
+const {Discord, MessageEmbed} = require("discord.js");
 
 const client = new Discord.Client;
 
 
 const prefix = "!";
 
-const msgCustom = new client.MessageEmbed().setColor("red").setTitle("1INCH/USDT").addField("titre","contenue");
+let msgCustom = new MessageEmbed();
+msgCustom.setColor("red");
+msgCustom.setTitle("oui");
+
 
 
 client.on("ready",()=>{
