@@ -13,7 +13,15 @@ client.on("ready",()=>{
 
     //parcours les serveur
     
-    client.guilds.cache.forEach(guild => {
+
+});
+
+client.on("message",msg =>{
+    if(msg.author.bot) return;
+    if(msg.content == prefix + "ping"){
+       msg.channel.send(" pong");
+
+       client.guilds.cache.forEach(guild => {
         console.log(`${guild.name} | ${guild.id}`);
         //parcours les chanelles de chaque serveur
         guild.channels.cache.forEach(channel => {
@@ -23,13 +31,6 @@ client.on("ready",()=>{
             }
           });
       });
-
-});
-
-client.on("message",msg =>{
-    if(msg.author.bot) return;
-    if(msg.content == prefix + "ping"){
-       msg.channel.send(" pong");
 
     }
 });
