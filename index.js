@@ -45,13 +45,10 @@ client.on("message",msg =>{
         msg.channel.send(embedmsg);*/
 
         const embed = new Discord.RichEmbed()
-        .setTitle("New FREE signal")
-        /*
-        * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        */
+        .setTitle("New signal")
         
         .setColor(0x00AE86)
-        .setDescription("This is the main body of text, it can hold 2048 characters.")
+        .setDescription("Notre equipe travaille pour vous fournir des signaux de qualitée")
         .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
         .setImage("http://i.imgur.com/yVpymuV.png")
         .setThumbnail("http://i.imgur.com/p2qNFag.png")
@@ -59,9 +56,12 @@ client.on("message",msg =>{
         * Takes a Date object, defaults to current date.
         */
         .setTimestamp()
-        .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-        .addField("This is a field title, it can hold 256 characters",
-            "This is a field value, it can hold 1024 characters.")
+        .addField(":calendar:DATE","16-03-2021")
+        .addField(":sparkles:CRYPTO","IOST/USDT")
+        .addField(":dollar:SIZE","5-15%")
+        .addField(":shopping_cart:BUY LEVEL ","02,25-1,9")
+        .addField(":dart:TAKE PROFIT ","0,95-0,12")
+        .addField("⛔️STOP LOSE ","0,059")
         /*
         * Inline fields may not display as inline if the thumbnail and/or image is too big.
         */
