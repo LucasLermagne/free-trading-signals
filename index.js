@@ -22,7 +22,8 @@ client.on("message",msg =>{
        msg.channel.send(" !create [Signal]  !info  !send   !setNbSignals [number] ");
 
     }
-    if(msg.content == prefix + "test1"){
+
+    if(msg.content == prefix + "test"){
 
         const embed = new Discord.RichEmbed()
         .setTitle("New signal")
@@ -35,74 +36,24 @@ client.on("message",msg =>{
         * Takes a Date object, defaults to current date.
         */
         .setTimestamp()
-        .addField(":calendar:DATE","16-03-2021")
-        .addField(":sparkles:CRYPTO","IOST/USDT")
-        .addField(":dollar:SIZE","5-15%")
-        .addField(":shopping_cart:BUY LEVEL ","02,25-1,9")
-        .addField(":dart:TAKE PROFIT ","0,95-0,12")
-        .addField("⛔️STOP LOSE ","0,059")
-
-     
-        
-        msg.channel.send({embed});
-        
- 
-     }
-    if(msg.content == prefix + "test2"){
-
-        const embed = new Discord.RichEmbed()
-        .setTitle("New signal")
-        
-        .setColor(0x00AE86)
-        .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
-        .setImage("http://i.imgur.com/yVpymuV.png")
-        .setThumbnail("http://i.imgur.com/p2qNFag.png")
-        /*
-        * Takes a Date object, defaults to current date.
-        */
-        .setTimestamp()
-
-        .addField(":calendar:DATE", "16-03-2021", true)
-        .addBlankField(true)
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
-
-        .addField(":dollar:SIZE", "5-15%", true)
         .addBlankField(true)
+        .addField(":calendar:DATE", "16-03-2021", true)
+
         .addField(":shopping_cart:BUY LEVEL ", "02,25-1,9", true)
-
-        .addField("⛔️STOP LOSE ", "0,059", true)
         .addBlankField(true)
-        .addField(":dart:TAKE PROFIT ", "0,95-0,12", true);    
+        .addField(":dollar:SIZE", "5-15%", true)
+
+        .addField(":dart:TAKE PROFIT ", "0,95-0,12", true)
+        .addBlankField(true)  
+        .addField("⛔️STOP LOSS ", "0,059", true);
+
         
         msg.channel.send({embed});
         
  
      }
-     if(msg.content == prefix + "test3"){
 
-        const embed = new Discord.RichEmbed()
-        .setTitle("New signal")
-        
-        .setColor(0x00AE86)
-        .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
-        .setImage("http://i.imgur.com/yVpymuV.png")
-        .setThumbnail("http://i.imgur.com/p2qNFag.png")
-        /*
-        * Takes a Date object, defaults to current date.
-        */
-        .setTimestamp()
-
-        .addField(":calendar:DATE 16-03-2021")
-        .addField(":sparkles:CRYPTO IOST/USDT")
-        .addField(":dollar:SIZE 5-15%")
-        .addField(":shopping_cart:BUY LEVEL  02,25-1,9")
-        .addField(":dart:TAKE PROFIT  0,95-0,12")
-        .addField("⛔️STOP LOSE 0,059")
-        
-        msg.channel.send({embed});
-        
- 
-     }
     if(msg.content == prefix + "infoo"){
         msg.channel.send(" Info trading signals");
  
