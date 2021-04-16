@@ -31,7 +31,8 @@ client.on("message",msg =>{
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content.startsWith(prefix+"create ")){
-             call = msg.content.slice(prefix.lenght).trim();
+            //call = msg.content.slice(prefix.lenght).trim();
+             call = message.content.substr("!create ".length);
             msg.channel.send("call saved " +call);
             console.log(call);
 
