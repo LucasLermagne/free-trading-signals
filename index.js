@@ -6,6 +6,13 @@ const client = new Discord.Client;
 const prefix = "!";
 
 var nbSignals = 0;
+var crypto ="";
+var date ="";
+var size ="";
+var buyLevel ="";
+var stopLoss ="";
+var takeProfit ="";
+
 var call ="";
 
 client.on("ready",()=>{
@@ -39,7 +46,7 @@ client.on("message",msg =>{
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
         .addField(":calendar:DATE", "16-03-2021", true)
         .addField(":dollar:SIZE", "5-15%", true)
-        
+
         .addField(":shopping_cart:BUY LEVEL ", "02,25-1,9", true)
         .addField(":dart:TAKE PROFIT ", "0,95-0,12", true) 
         .addField("⛔️STOP LOSS ", "0,059", true);
@@ -62,10 +69,14 @@ client.on("message",msg =>{
             msg.channel.send("call saved " +call);
 
          }
-         else if(msg.content == prefix + "info"){
-            msg.channel.send("Call info " +call);
-
-          
+         else if(msg.content == prefix + "verif"){
+            msg.channel.send("date  " +date);
+            msg.channel.send("crypto  " +crypto);  
+            msg.channel.send("size  " +size);  
+            msg.channel.send("buyLevel  " +buyLevel);  
+            msg.channel.send("stopLoss  " +stopLoss);  
+            msg.channel.send("takeProfit  " +takeProfit);    
+       
          }
          else if(msg.content == prefix + "send"){
             nbSignals = nbSignals +1;
@@ -93,7 +104,31 @@ client.on("message",msg =>{
                 }
                 });       
              });
+        }
 
+        else if(msg.content.startsWith(prefix+"setCrypto ")){
+            crypto = msg.content.substr("!setCrypto ".length);
+            msg.channel.send("Crypto saved " +crypto);   
+        }
+        else if(msg.content.startsWith(prefix+"setDate ")){
+            date = msg.content.substr("!setDate ".length);
+            msg.channel.send("date saved " +date);   
+        }
+        else if(msg.content.startsWith(prefix+"setSize ")){
+            size = msg.content.substr("!setSize ".length);
+            msg.channel.send("size saved " +size);   
+        }
+        else if(msg.content.startsWith(prefix+"setBuyLevel ")){
+            buyLevel = msg.content.substr("!setBuy ".length);
+            msg.channel.send("buyLevel saved " +buyLevel);   
+        }
+        else if(msg.content.startsWith(prefix+"setStopLoss ")){
+            stopLoss = msg.content.substr("!setStopLoss ".length);
+            msg.channel.send("stopLoss saved " +stopLoss);   
+        }
+        else if(msg.content.startsWith(prefix+"setTakeProfit ")){
+            takeProfit = msg.content.substr("!setTakeProfit ".length);
+            msg.channel.send("takeProfit saved " +takeProfit);   
         }
     }
 
