@@ -22,6 +22,16 @@ client.on("message",msg =>{
        msg.channel.send(" !create [Signal]  !info  !send   !setNbSignals [number] ");
 
     }
+
+    if(msg.content == prefix + "test"){
+        let embedmsg = new Discord.MessageEmbed().setColor("Red")
+        .setTitle("titre")
+        .setDescription("Description")
+        .setFooter("footer")
+        msg.channel.send(embedmsg);
+        
+ 
+     }
     if(msg.content == prefix + "infoo"){
         msg.channel.send(" Info trading signals");
  
@@ -48,7 +58,7 @@ client.on("message",msg =>{
                 if(channel.name == "💸┇free-signals"){
                     channel.send(call);
                 }
-                if(channel.id == "832570617295405096"){
+                else if(channel.id == "832570617295405096"){
                     channel.setName("Total Signals: "+nbSignals);
                 }
                 });
