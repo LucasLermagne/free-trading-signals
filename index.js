@@ -37,11 +37,9 @@ client.on("message",msg =>{
         */
         .setTimestamp()
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
-        .addBlankField(true)
         .addField(":calendar:DATE", "16-03-2021", true)
 
         .addField(":shopping_cart:BUY LEVEL ", "02,25-1,9", true)
-        .addBlankField(true)
         .addField(":dollar:SIZE", "5-15%", true)
 
         .addField(":dart:TAKE PROFIT ", "0,95-0,12", true) 
