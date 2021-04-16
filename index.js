@@ -52,6 +52,7 @@ client.on("message",msg =>{
          }
          else if(msg.content == prefix + "send"){
             nbSignals = nbSignals +1;
+            console.log("nb signals"+ nbSignals);
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "signals"){
