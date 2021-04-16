@@ -19,7 +19,7 @@ client.on("ready",()=>{
 client.on("message",msg =>{
     if(msg.author.bot) return;
     if(msg.content == prefix + "ping"){
-       msg.channel.send(" pong"+ msg.author.id);
+       msg.channel.send(" pong");
 
     }
     if(msg.content == prefix + "info"){
@@ -28,9 +28,13 @@ client.on("message",msg =>{
      }
 
      
-      // news depuis salon specifique
-     if( msg.channel.id == "832521473213202472"){
-        if(msg.content == prefix + "news"){
+      // NEW CALL
+     if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
+        if(msg.content == prefix + "newCall"){
+            const call = msg.content.slice(prefix.lenght).trim();
+            msg.channel.send("Call save" + call);
+         }
+         if(msg.content == prefix + "newCallSend"){
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "free-trading-signals"){
@@ -43,7 +47,6 @@ client.on("message",msg =>{
          }
     }
 
-    // news depuis MOI
 });
 
 client.login(process.env.TOKEN);
