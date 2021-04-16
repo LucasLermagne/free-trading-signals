@@ -25,8 +25,8 @@ client.on("ready",()=>{
 
 client.on("message",msg =>{
     if(msg.author.bot) return;
-    if(msg.content == prefix + "ping"){
-       msg.channel.send(" pong");
+    if(msg.content == prefix + "commandes"){
+       msg.channel.send(" !create [Signal]  !info  !send   !setNbSignals [number] ");
 
     }
     if(msg.content == prefix + "infoo"){
@@ -39,20 +39,17 @@ client.on("message",msg =>{
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content.startsWith(prefix+"create ")){
             //call = msg.content.slice(prefix.lenght).trim();
-             call = msg.content.substr("!create ".length);
+            call = msg.content.substr("!create ".length);
             msg.channel.send("call saved " +call);
-            console.log(call);
 
          }
          else if(msg.content == prefix + "info"){
             msg.channel.send("Call info " +call);
-            console.log("Call info " + call);
 
           
          }
          else if(msg.content == prefix + "send"){
             nbSignals = nbSignals +1;
-            console.log("nb signals"+ nbSignals);
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "signals"){
@@ -65,6 +62,10 @@ client.on("message",msg =>{
             
              });
          }
+         else if(msg.content == prefix + "setNbSignals"){
+            nbSignals = msg.content.substr("!setNbSignals ".length);
+            msg.channel.send("nb Signals saved " +nbSignals);
+        }
     }
 
 });
