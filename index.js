@@ -28,7 +28,6 @@ client.on("message",msg =>{
         .setTitle("New signal")
         
         .setColor(0x00AE86)
-        .setDescription("Notre equipe travaille pour vous fournir des signaux de qualitée")
         .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
         .setImage("http://i.imgur.com/yVpymuV.png")
         .setThumbnail("http://i.imgur.com/p2qNFag.png")
@@ -55,7 +54,6 @@ client.on("message",msg =>{
         .setTitle("New signal")
         
         .setColor(0x00AE86)
-        .setDescription("Notre equipe travaille pour vous fournir des signaux de qualitée")
         .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
         .setImage("http://i.imgur.com/yVpymuV.png")
         .setThumbnail("http://i.imgur.com/p2qNFag.png")
@@ -75,6 +73,31 @@ client.on("message",msg =>{
         .addField("⛔️STOP LOSE ", "0,059", true)
         .addBlankField(true)
         .addField(":dart:TAKE PROFIT ", "0,95-0,12", true);    
+        
+        msg.channel.send({embed});
+        
+ 
+     }
+     if(msg.content == prefix + "test3"){
+
+        const embed = new Discord.RichEmbed()
+        .setTitle("New signal")
+        
+        .setColor(0x00AE86)
+        .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
+        .setImage("http://i.imgur.com/yVpymuV.png")
+        .setThumbnail("http://i.imgur.com/p2qNFag.png")
+        /*
+        * Takes a Date object, defaults to current date.
+        */
+        .setTimestamp()
+
+        .addField(":calendar:DATE 16-03-2021")
+        .addField(":sparkles:CRYPTO IOST/USDT")
+        .addField(":dollar:SIZE 5-15%")
+        .addField(":shopping_cart:BUY LEVEL  02,25-1,9")
+        .addField(":dart:TAKE PROFIT  0,95-0,12")
+        .addField("⛔️STOP LOSE 0,059")
         
         msg.channel.send({embed});
         
