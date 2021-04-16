@@ -30,16 +30,20 @@ client.on("message",msg =>{
      
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
-        if(msg.content == prefix + "newCall"){
+        if(msg.content == prefix + "CallCreate"){
             const call = msg.content.slice(prefix.lenght).trim();
-            msg.channel.send("Call save" + call);
+            msg.channel.send("Call saved" + call);
          }
-         if(msg.content == prefix + "newCallSend"){
+         if(msg.content == prefix + "CallInfo"){
+            const call = msg.content.slice(prefix.lenght).trim();
+            msg.channel.send(call);
+         }
+         if(msg.content == prefix + "CallSend"){
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "free-trading-signals"){
-                    channel.send("16-03-2021 IOSTUSDT   SIZE> 5-15%    BUY LEVEL >0,072-0,065    SL>0,059    TP>0,95-0,12");
-                    
+                    channel.send(call);
+    
                 }
                 });
             
