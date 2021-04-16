@@ -15,7 +15,7 @@ client.on("ready",()=>{
     client.guilds.forEach(guild => {
         guild.channels.forEach(channel => {
         if(channel.id == "832570617295405096"){
-            channel.setName("dfgdfg");
+            channel.setName("Total Signals: "+nbSignals);
         }
         });
             
