@@ -5,14 +5,21 @@ const client = new Discord.Client;
 
 const prefix = "!";
 
-
+var nbSignals = 0;
 var call ="";
 
 client.on("ready",()=>{
     console.log("bot opérationnel");
 
     
-
+    client.guilds.forEach(guild => {
+        guild.channels.forEach(channel => {
+        if(channel.id == "832570617295405096"){
+            channel.setName("dfgdfg");
+        }
+        });
+            
+     });
 
 });
 
@@ -33,6 +40,7 @@ client.on("message",msg =>{
         if(msg.content.startsWith(prefix+"create ")){
             //call = msg.content.slice(prefix.lenght).trim();
              call = msg.content.substr("!create ".length);
+             nbSignals = nbSignals +1;
             msg.channel.send("call saved " +call);
             console.log(call);
 
@@ -46,7 +54,7 @@ client.on("message",msg =>{
          else if(msg.content == prefix + "send"){
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
-                if(channel.name == "free-trading-signals"){
+                if(channel.name == "signals"){
                     channel.send(call);
     
                 }
