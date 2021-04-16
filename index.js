@@ -34,10 +34,23 @@ client.on("message",msg =>{
             const call = msg.content.slice(prefix.lenght).trim();
             msg.channel.send("Call saved " + call);
             console.log("Call saved " + call);
+
+            const messageSlice = msg.content.slice(prefix.lenght).trim();
+            msg.channel.send(messageSlice)
          }
          else if(msg.content == prefix + "info"){
             msg.channel.send("Call info " +call);
             console.log("Call info " + call);
+
+            let rich = new discord.RichEmbed();
+            rich.setTitle('Lien')
+                .setAuthor('Prochaine migration des spawns' , 'http://chakalis49.ovh/bot/migration')
+                .setColor(color.purple)
+                .setDescription('Jeudi 15 Novembre à 1H')
+                .setFooter('Bot by Chakalis49' , 'http://chakalis49.ovh/bot/ppchakalis49')
+                .setURL('https://pokemon.gameinfo.io/fr/events')
+                msg.channel.send({embed: rich});
+            console.log("--- migration effectué");
          }
          else if(msg.content == prefix + "send"){
             client.guilds.forEach(guild => {
