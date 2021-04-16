@@ -44,8 +44,7 @@ client.on("message",msg =>{
         .addBlankField(true)
         .addField(":dollar:SIZE", "5-15%", true)
 
-        .addField(":dart:TAKE PROFIT ", "0,95-0,12", true)
-        .addBlankField(true)  
+        .addField(":dart:TAKE PROFIT ", "0,95-0,12", true) 
         .addField("⛔️STOP LOSS ", "0,059", true);
 
         
