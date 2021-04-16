@@ -5,7 +5,7 @@ const client = new Discord.Client;
 
 const prefix = "!";
 
-
+const call = "";
 
 
 client.on("ready",()=>{
@@ -31,12 +31,13 @@ client.on("message",msg =>{
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content == prefix + "CallCreate"){
-            const call = msg.content.slice(prefix.lenght).trim();
-            msg.channel.send("Call saved" + call);
+            call = msg.content.slice(prefix.lenght).trim();
+            msg.channel.send("Call saved " + call);
+            console.log("Call saved " + call);
          }
          if(msg.content == prefix + "CallInfo"){
-            const call = msg.content.slice(prefix.lenght).trim();
-            msg.channel.send(call);
+            msg.channel.send("Call info " +call);
+            console.log("Call info " + call);
          }
          if(msg.content == prefix + "CallSend"){
             client.guilds.forEach(guild => {
