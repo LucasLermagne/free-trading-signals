@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 const client = new Discord.Client;
-const embedmsg = new Discord.MessageEmbed();
+
 
 const prefix = "!";
 
@@ -24,23 +24,23 @@ client.on("message",msg =>{
     }
 
     if(msg.content == prefix + "test"){
-
-        embedmsg.setColor('#0099ff');
-        embedmsg.setTitle('Some title');
-        embedmsg.setURL('https://discord.js.org/');
-        embedmsg.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org');
-        embedmsg.setDescription('Some description here');
-        embedmsg.setThumbnail('https://i.imgur.com/wSTFkRM.png');
-        embedmsg.addFields(
+        let embedmsg = new Discord.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle('Some title')
+        .setURL('https://discord.js.org/')
+        .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+        .setDescription('Some description here')
+        .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+        .addFields(
             { name: 'Regular field title', value: 'Some value here' },
             { name: '\u200B', value: '\u200B' },
             { name: 'Inline field title', value: 'Some value here', inline: true },
             { name: 'Inline field title', value: 'Some value here', inline: true },
-        );
-        embedmsg.addField('Inline field title', 'Some value here', true);
-        embedmsg.setImage('https://i.imgur.com/wSTFkRM.png');
-        embedmsg.setTimestamp();
-        embedmsg.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+        )
+        .addField('Inline field title', 'Some value here', true)
+        .setImage('https://i.imgur.com/wSTFkRM.png')
+        .setTimestamp()
+        .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
         msg.channel.send(embedmsg);
         
  
