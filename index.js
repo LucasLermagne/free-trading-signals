@@ -36,12 +36,8 @@ client.on("message",msg =>{
         .setTitle("New signal")
         
         .setColor(0x00AE86)
-        .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
-        .setImage("http://i.imgur.com/yVpymuV.png")
-        .setThumbnail("http://i.imgur.com/p2qNFag.png")
-        /*
-        * Takes a Date object, defaults to current date.
-        */
+        .setFooter("I authorise the sharing of our trading signals", "https://image.noelshack.com/fichiers/2021/15/5/1618586766-img-20210414-182812-004.jpg")
+
         .setTimestamp()
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
         .addField(":calendar:DATE", "16-03-2021", true)
@@ -83,6 +79,22 @@ client.on("message",msg =>{
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "💸┇free-signals"){
+                    const embed = new Discord.RichEmbed()
+                    .setTitle("New signal")
+                    
+                    .setColor(0x00AE86)
+                    .setFooter("I authorise the sharing of our trading signals", "https://image.noelshack.com/fichiers/2021/15/5/1618586766-img-20210414-182812-004.jpg")
+                    .setTimestamp()
+                    .addField(":sparkles:CRYPTO", crypto, true)
+                    .addField(":calendar:DATE", date, true)
+                    .addField(":dollar:SIZE", size, true)
+
+                    .addField(":shopping_cart:BUY LEVEL ", buyLevel, true)
+                    .addField(":dart:TAKE PROFIT ", takeProfit, true) 
+                    .addField("⛔️STOP LOSS ", stopLoss, true);
+
+                    
+                    channel.send({embed});
                     channel.send(call);
                 }
                 else if(channel.id == "832570617295405096"){
