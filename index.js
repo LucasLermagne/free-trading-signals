@@ -30,16 +30,16 @@ client.on("message",msg =>{
      
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
-        if(msg.content == prefix + "CallCreate"){
+        if(msg.content == prefix + "create"){
             call = msg.content.slice(prefix.lenght).trim();
             msg.channel.send("Call saved " + call);
             console.log("Call saved " + call);
          }
-         else if(msg.content == prefix + "CallInfo"){
+         else if(msg.content == prefix + "info"){
             msg.channel.send("Call info " +call);
             console.log("Call info " + call);
          }
-         else if(msg.content == prefix + "CallSend"){
+         else if(msg.content == prefix + "send"){
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "free-trading-signals"){
