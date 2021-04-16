@@ -32,7 +32,9 @@ client.on("message",msg =>{
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content.startsWith(prefix+"create ")){
             const messageSlice = msg.content.slice(prefix.lenght).trim();
+            var poll = msg.content.substr(prefix+"create ".length);
             console.log(messageSlice);
+            console.log(poll);
          }
          else if(msg.content == prefix + "info"){
             msg.channel.send("Call info " +call);
