@@ -22,7 +22,7 @@ client.on("message",msg =>{
        msg.channel.send(" pong");
 
     }
-    if(msg.content == prefix + "info"){
+    if(msg.content == prefix + "infoo"){
         msg.channel.send(" Info trading signals");
  
      }
@@ -31,9 +31,7 @@ client.on("message",msg =>{
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content == prefix + "create"){
-            const call = msg.content.slice(prefix.lenght).trim();
-            msg.channel.send("Call saved " + call);
-            console.log("Call saved " + call);
+
 
             const messageSlice = msg.content.slice(prefix.lenght).trim();
             msg.channel.send(messageSlice)
@@ -42,15 +40,7 @@ client.on("message",msg =>{
             msg.channel.send("Call info " +call);
             console.log("Call info " + call);
 
-            let rich = new discord.RichEmbed();
-            rich.setTitle('Lien')
-                .setAuthor('Prochaine migration des spawns' , 'http://chakalis49.ovh/bot/migration')
-                .setColor(color.purple)
-                .setDescription('Jeudi 15 Novembre à 1H')
-                .setFooter('Bot by Chakalis49' , 'http://chakalis49.ovh/bot/ppchakalis49')
-                .setURL('https://pokemon.gameinfo.io/fr/events')
-                msg.channel.send({embed: rich});
-            console.log("--- migration effectué");
+          
          }
          else if(msg.content == prefix + "send"){
             client.guilds.forEach(guild => {
