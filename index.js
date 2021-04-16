@@ -12,14 +12,7 @@ client.on("ready",()=>{
     console.log("bot opérationnel");
 
     
-    //TOTAL SIGNALS
-    client.guilds.forEach(guild => {
-        guild.channels.forEach(channel => {
-        if(channel.id == "832570617295405096"){
-            channel.setName("Total Signals: "+nbSignals);
-        }
-        });       
-     });
+
 
 });
 
@@ -62,9 +55,19 @@ client.on("message",msg =>{
             
              });
          }
-         else if(msg.content == prefix + "setNbSignals"){
+         else if(msg.content.startsWith(prefix+"setNbSignals ")){
             nbSignals = msg.content.substr("!setNbSignals ".length);
             msg.channel.send("nb Signals saved " +nbSignals);
+
+
+            client.guilds.forEach(guild => {
+                guild.channels.forEach(channel => {
+                if(channel.id == "832570617295405096"){
+                    channel.setName("Total Signals: "+nbSignals);
+                }
+                });       
+             });
+
         }
     }
 
