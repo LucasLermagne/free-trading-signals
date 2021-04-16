@@ -45,7 +45,7 @@ client.on("message",msg =>{
             nbSignals = nbSignals +1;
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
-                if(channel.name == "signals"){
+                if(channel.name == "💸┇free-signals"){
                     channel.send(call);
                 }
                 if(channel.id == "832570617295405096"){
