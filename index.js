@@ -52,10 +52,6 @@ client.on("message",msg =>{
         
         .setColor(0x00AE86)
         .setDescription("This is the main body of text, it can hold 2048 characters.")
-        .setTitle("Date")
-        .setDescription("10-02-221")
-        .setTitle("Crypto")
-        .setDescription("USDT/USDT")
         .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
         .setImage("http://i.imgur.com/yVpymuV.png")
         .setThumbnail("http://i.imgur.com/p2qNFag.png")
@@ -69,12 +65,12 @@ client.on("message",msg =>{
         /*
         * Inline fields may not display as inline if the thumbnail and/or image is too big.
         */
-        .addField("Inline Field", "They can also be inline.", true)
+        .addField("DATE", "16-03-2021", true)
         /*
         * Blank field, useful to create some space.
         */
         .addBlankField(true)
-        .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+        .addField("CRYPTO", "IOST/USDT", true);
         
         msg.channel.send({embed});
         
