@@ -35,11 +35,11 @@ client.on("message",msg =>{
             msg.channel.send("Call saved " + call);
             console.log("Call saved " + call);
          }
-         if(msg.content == prefix + "CallInfo"){
+         else if(msg.content == prefix + "CallInfo"){
             msg.channel.send("Call info " +call);
             console.log("Call info " + call);
          }
-         if(msg.content == prefix + "CallSend"){
+         else if(msg.content == prefix + "CallSend"){
             client.guilds.forEach(guild => {
                 guild.channels.forEach(channel => {
                 if(channel.name == "free-trading-signals"){
