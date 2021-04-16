@@ -6,6 +6,7 @@ const client = new Discord.Client;
 const prefix = "!";
 
 
+var call ="";
 
 client.on("ready",()=>{
     console.log("bot opérationnel");
@@ -30,7 +31,7 @@ client.on("message",msg =>{
       // NEW CALL
      if( msg.channel.id == "832521473213202472" || msg.author.id == "216221458223857664"){
         if(msg.content.startsWith(prefix+"create ")){
-            const call = msg.content.slice(prefix.lenght).trim();
+             call = msg.content.slice(prefix.lenght).trim();
             msg.channel.send("call saved " +call);
             console.log(call);
 
