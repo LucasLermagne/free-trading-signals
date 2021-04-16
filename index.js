@@ -66,19 +66,16 @@ client.on("message",msg =>{
         * Inline fields may not display as inline if the thumbnail and/or image is too big.
         */
         .addField(":calendar:DATE", "16-03-2021", true)
-        /*
-        * Blank field, useful to create some space.
-        */
         .addBlankField(true)
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
 
         .addField(":dollar:SIZE", "5-15%", true)
-        /*
-        * Blank field, useful to create some space.
-        */
         .addBlankField(true)
-        .addField(":shopping_cart:BUY LEVEL ", "02,25-1,9", true);
-        
+        .addField(":shopping_cart:BUY LEVEL ", "02,25-1,9", true)
+
+        .addField("⛔️STOP LOSE ", "0,059", true)
+        .addBlankField(true)
+        .addField(":dart:TAKE PROFIT ", "0,95-0,12", true);    
         
         msg.channel.send({embed});
         
