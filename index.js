@@ -22,27 +22,7 @@ client.on("message",msg =>{
        msg.channel.send(" !create [Signal]  !info  !send   !setNbSignals [number] ");
 
     }
-
-    if(msg.content == prefix + "test"){
-        /*
-        let embedmsg = new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle('Some title')
-        .setURL('https://discord.js.org/')
-        .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-        .setDescription('Some description here')
-        .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-        .addFields(
-            { name: 'Regular field title', value: 'Some value here' },
-            { name: '\u200B', value: '\u200B' },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-            { name: 'Inline field title', value: 'Some value here', inline: true },
-        )
-        .addField('Inline field title', 'Some value here', true)
-        .setImage('https://i.imgur.com/wSTFkRM.png')
-        .setTimestamp()
-        .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-        msg.channel.send(embedmsg);*/
+    if(msg.content == prefix + "test1"){
 
         const embed = new Discord.RichEmbed()
         .setTitle("New signal")
@@ -62,9 +42,28 @@ client.on("message",msg =>{
         .addField(":shopping_cart:BUY LEVEL ","02,25-1,9")
         .addField(":dart:TAKE PROFIT ","0,95-0,12")
         .addField("⛔️STOP LOSE ","0,059")
+
+     
+        
+        msg.channel.send({embed});
+        
+ 
+     }
+    if(msg.content == prefix + "test2"){
+
+        const embed = new Discord.RichEmbed()
+        .setTitle("New signal")
+        
+        .setColor(0x00AE86)
+        .setDescription("Notre equipe travaille pour vous fournir des signaux de qualitée")
+        .setFooter("I authorise the sharing of our trading signals", "http://i.imgur.com/w1vhFSR.png")
+        .setImage("http://i.imgur.com/yVpymuV.png")
+        .setThumbnail("http://i.imgur.com/p2qNFag.png")
         /*
-        * Inline fields may not display as inline if the thumbnail and/or image is too big.
+        * Takes a Date object, defaults to current date.
         */
+        .setTimestamp()
+
         .addField(":calendar:DATE", "16-03-2021", true)
         .addBlankField(true)
         .addField(":sparkles:CRYPTO", "IOST/USDT", true)
